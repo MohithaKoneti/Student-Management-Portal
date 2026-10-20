@@ -32,3 +32,58 @@ ul {
 li {
     padding: 10px;
 }
+
+/* Registration Form */
+form {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0 2px 8px #00000015;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccd3dd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #174ea6;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #123b80;
+}
+
+/* Registered Students Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #d5dce5;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #174ea6;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f0f4f8;
+}

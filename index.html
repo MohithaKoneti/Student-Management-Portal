@@ -9,6 +9,7 @@
 <body>
     <h1>Student Management Portal</h1>
     <p>Welcome to the Student Management Portal.</p>
+
     <h2>Dashboard</h2>
     <ul>
         <li>Student Registration</li>
@@ -19,5 +20,107 @@
         <li>Fees Management</li>
         <li>Report Generation</li>
     </ul>
+
+    <h2>Student Login</h2>
+    <form id="loginForm">
+        <label for="loginStudentId">Student ID:</label><br>
+        <input type="text" id="loginStudentId" required>
+        <br><br>
+        <button type="submit">Login</button>
+    </form>
+    <p id="loginMessage"></p>
+
+    <h2>Student Registration</h2>
+    <form id="registrationForm">
+        <label for="studentName">Student Name:</label><br>
+        <input type="text" id="studentName" name="studentName" required>
+        <br><br>
+
+        <label for="studentId">Student ID:</label><br>
+        <input type="text" id="studentId" name="studentId" required>
+        <br><br>
+
+        <label for="course">Course:</label><br>
+        <input type="text" id="course" name="course" required>
+        <br><br>
+
+        <button type="submit">Register Student</button>
+    </form>
+
+    <h2>Student Profile</h2>
+    <form id="profileForm">
+        <label for="profileStudentId">Enter Student ID:</label><br>
+        <input type="text" id="profileStudentId" required>
+        <br><br>
+        <button type="submit">View Profile</button>
+    </form>
+    <div id="profileDetails"></div>
+
+    <h2>Attendance Management</h2>
+    <form id="attendanceForm">
+        <label for="attendanceStudentId">Student ID:</label><br>
+        <input type="text" id="attendanceStudentId" required>
+        <br><br>
+        <label for="attendanceStatus">Attendance Status:</label><br>
+        <select id="attendanceStatus">
+            <option value="Present">Present</option>
+            <option value="Absent">Absent</option>
+        </select>
+        <br><br>
+        <button type="submit">Mark Attendance</button>
+    </form>
+    <p id="attendanceMessage"></p>
+
+    <h2>Marks Management</h2>
+    <form id="marksForm">
+        <label for="marksStudentId">Student ID:</label><br>
+        <input type="text" id="marksStudentId" required>
+        <br><br>
+        <label for="subject">Subject:</label><br>
+        <input type="text" id="subject" required>
+        <br><br>
+        <label for="marks">Marks (0-100):</label><br>
+        <input type="number" id="marks" min="0" max="100" required>
+        <br><br>
+        <button type="submit">Save Marks</button>
+    </form>
+    <p id="marksMessage"></p>
+
+    <h2>Fees Management</h2>
+    <form id="feesForm">
+        <label for="feesStudentId">Student ID:</label><br>
+        <input type="text" id="feesStudentId" required>
+        <br><br>
+        <label for="feeAmount">Fee Amount (₹):</label><br>
+        <input type="number" id="feeAmount" min="1" step="0.01" required>
+        <br><br>
+        <label for="feeStatus">Payment Status:</label><br>
+        <select id="feeStatus">
+            <option value="Paid">Paid</option>
+            <option value="Pending">Pending</option>
+        </select>
+        <br><br>
+        <button type="submit">Save Fee Record</button>
+    </form>
+    <p id="feesMessage"></p>
+
+    <h2>Report Generation</h2>
+    <button type="button" id="generateReport">Generate Student Report</button>
+    <div id="reportOutput"></div>
+
+    <h2>Registered Students</h2>
+    <table id="studentsTable">
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>Student ID</th>
+                <th>Course</th>
+            </tr>
+        </thead>
+        <tbody id="studentsList">
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
 </body>
 </html>
